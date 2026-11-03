@@ -1,0 +1,1019 @@
+
+/* ========================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+======================================== */
+
+:root {
+    --azul: #152b40;
+    --dorado: #d9b875;
+    --fondo: #f5f3ee;
+    --blanco: #ffffff;
+    --texto: #243447;
+    --texto-suave: #65717c;
+    --borde: #e3e0d8;
+    --sombra: 0 10px 30px rgba(21, 43, 64, 0.08);
+    --radio: 14px;
+    --ancho-maximo: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    color: var(--azul);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.25;
+}
+
+p {
+    margin-top: 0;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.seccion-nosotros,
+.seccion-ministerios,
+.seccion-predicaciones,
+.seccion-actividades,
+.seccion-orientacion,
+.seccion-contacto,
+.seccion-instituto {
+    padding: 90px 24px;
+}
+
+.etiqueta-seccion {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #8a692b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+======================================== */
+
+
+/* ENCABEZADO Y NAVEGACIÓN */
+
+.cabecera {
+    position: flex;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    width: 100%;
+    padding: 18px 4%;
+
+    background-color: #152b40;
+    color: #ffffff;
+    border-bottom: 2px solid #d9b875;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.marca {
+    flex-shrink: 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 8px 18px;
+}
+
+.navegacion a {
+    padding: 5px 0;
+    color: #ffffff;
+    font-size: 0.86rem;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+    color: #d9b875;
+}
+
+
+
+/* ========================================
+   3. BOTONES GENERALES
+======================================== */
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid var(--dorado);
+    border-radius: 6px;
+    background-color: var(--dorado);
+    color: var(--azul);
+    font-weight: 700;
+    text-align: center;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #e5ca91;
+    box-shadow: 0 6px 16px rgba(21, 43, 64, 0.12);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ========================================
+   4. PORTADA
+======================================== */
+
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    max-width: var(--ancho-maximo);
+    min-height: 580px;
+    margin: 0 auto;
+    padding: 75px 24px;
+}
+
+.portada-contenido h1 {
+    max-width: 650px;
+    margin-bottom: 24px;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 500;
+}
+
+.portada-contenido p {
+    max-width: 540px;
+    margin-bottom: 30px;
+    color: var(--texto-suave);
+    font-size: 1.08rem;
+}
+
+.portada-visual {
+    overflow: hidden;
+    min-height: 350px;
+    border-radius: var(--radio);
+    background-color: #e5e0d5;
+    box-shadow: var(--sombra);
+}
+
+.portada-visual img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* ========================================
+   5. NOSOTROS
+======================================== */
+
+.seccion-nosotros {
+    background-color: var(--blanco);
+}
+
+.nosotros-contenido {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+}
+
+.nosotros-contenido > h2,
+.seccion-ministerios h2,
+.seccion-contacto h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.nosotros-contenido > p {
+    max-width: 760px;
+    margin-bottom: 40px;
+    color: var(--texto-suave);
+}
+
+.nosotros-detalles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.nosotros-detalles article {
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--fondo);
+}
+
+.nosotros-detalles h3 {
+    margin-bottom: 14px;
+    font-size: 1.35rem;
+}
+
+.nosotros-detalles p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+}
+
+/* ========================================
+   6. MINISTERIOS
+======================================== */
+
+.seccion-ministerios {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.seccion-ministerios > p {
+    max-width: 760px;
+    margin-bottom: 40px;
+    color: var(--texto-suave);
+}
+
+.ministerios-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-ministerio {
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.tarjeta-ministerio:hover {
+    transform: translateY(-5px);
+    border-color: var(--dorado);
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-ministerio h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.tarjeta-ministerio p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+}
+
+/* ========================================
+   7. PREDICACIONES Y PESTAÑAS
+======================================== */
+
+.seccion-predicaciones {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.predicaciones-encabezado,
+.predicaciones-contenido,
+.bosquejos-aviso {
+    max-width: var(--ancho-maximo);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.predicaciones-encabezado h2 {
+    margin-bottom: 14px;
+    color: var(--blanco);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.predicaciones-encabezado p {
+    color: #d5dce2;
+}
+
+.predicaciones-pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.pestana {
+    padding: 12px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--blanco);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pestana:hover,
+.pestana.tipo-activo {
+    border-color: var(--dorado);
+    background-color: var(--dorado);
+    color: var(--azul);
+}
+
+.predicaciones-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+}
+
+.predicacion-video {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radio);
+    background-color: #203c54;
+}
+
+.predicacion-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.predicacion-video h3 {
+    margin: 0;
+    padding: 18px 18px 8px;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+}
+
+.predicacion-video a {
+    display: inline-block;
+    margin: 0 18px 20px;
+    color: var(--dorado);
+    font-size: 0.9rem;
+}
+
+.predicacion-video a:hover {
+    text-decoration: underline;
+}
+
+.bosquejos-aviso {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radio);
+    background-color: #203c54;
+    color: #e0e6eb;
+}
+
+.bosquejos-aviso h3 {
+    color: var(--blanco);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ========================================
+   8. ACTIVIDADES Y ANUNCIOS
+======================================== */
+
+.actividades-encabezado {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto 35px;
+}
+
+.actividades-encabezado h2 {
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.actividades-encabezado p {
+    color: var(--texto-suave);
+}
+
+.actividades-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto 50px;
+}
+
+.tarjeta-actividad {
+    padding: 26px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(21, 43, 64, 0.04);
+}
+
+.actividad-categoria {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #8a692b;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tarjeta-actividad h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.tarjeta-actividad p {
+    color: var(--texto-suave);
+}
+
+.tarjeta-actividad .actividad-fecha {
+    margin-bottom: 0;
+    color: var(--azul);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.admin-actividades {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+}
+
+.admin-actividades h3 {
+    margin-bottom: 10px;
+}
+
+.admin-actividades > p {
+    color: var(--texto-suave);
+}
+
+/* ========================================
+   9. FORMULARIOS
+======================================== */
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    color: var(--azul);
+    font-size: 0.93rem;
+    font-weight: 700;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #cfd4d8;
+    border-radius: 6px;
+    background-color: var(--blanco);
+    color: var(--texto);
+}
+
+.campo-formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--azul);
+}
+
+.mensaje-formulario {
+    min-height: 1.5em;
+    margin-top: 15px;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/* ========================================
+   10. ORIENTACIÓN PASTORAL
+======================================== */
+
+.seccion-orientacion {
+    background-color: #ebe7dd;
+}
+
+.orientacion-contenido {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 55px;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+}
+
+.orientacion-texto h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.orientacion-texto p {
+    color: var(--texto-suave);
+}
+
+.orientacion-panel {
+    padding: 32px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.orientacion-panel h3 {
+    margin-bottom: 24px;
+}
+
+.orientacion-whatsapp {
+    display: inline-block;
+    margin-top: 18px;
+    color: #426b47;
+    font-weight: 700;
+}
+
+.orientacion-whatsapp:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   11. CONTACTO
+======================================== */
+
+.seccion-contacto {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.contacto-encabezado {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.contacto-encabezado p {
+    color: var(--texto-suave);
+}
+
+.contacto-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-contacto {
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+}
+
+.tarjeta-contacto h3 {
+    margin-bottom: 12px;
+}
+
+.tarjeta-contacto p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+}
+
+/* ========================================
+   12. INSTITUTO
+======================================== */
+
+.seccion-instituto {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.instituto-contenido {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.instituto-contenido h2 {
+    color: var(--blanco);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.instituto-contenido p {
+    margin-bottom: 28px;
+    color: #d5dce2;
+}
+
+/* ========================================
+   13. CHATBOT FLOTANTE
+======================================== */
+
+.chatbot {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 200;
+}
+
+.chatbot-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+    background-color: var(--dorado);
+    color: var(--azul);
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.chatbot-boton:hover {
+    transform: scale(1.06);
+}
+
+.chatbot-ventana {
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: min(360px, calc(100vw - 32px));
+    height: 440px;
+    max-height: calc(100dvh - 130px);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.chatbot-encabezado h3 {
+    margin: 0;
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.chatbot-cerrar {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+.chatbot-mensajes {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.chatbot-mensajes p {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-size: 0.92rem;
+}
+
+.chatbot-formulario {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid var(--borde);
+}
+
+.chatbot-formulario input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #cfd4d8;
+    border-radius: 6px;
+}
+
+.chatbot-formulario button {
+    padding: 10px 14px;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* ========================================
+   14. PIE DE PÁGINA
+======================================== */
+
+.pie-pagina {
+    padding: 45px 24px 20px;
+    background-color: #0e2030;
+    color: #e0e6eb;
+}
+
+.pie-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+}
+
+.pie-contenido h2 {
+    margin-bottom: 8px;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+.pie-contenido p {
+    margin-bottom: 0;
+    color: #c2cbd3;
+}
+
+.enlace-inicio {
+    color: var(--dorado);
+    font-weight: 700;
+}
+
+.enlace-inicio:hover {
+    text-decoration: underline;
+}
+
+.pie-inferior {
+    max-width: var(--ancho-maximo);
+    margin: 30px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #c2cbd3;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   15. TABLETAS Y PANTALLAS MEDIANAS
+======================================== */
+
+@media (max-width: 1000px) {
+    .cabecera {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 24px;
+    }
+
+    .navegacion {
+        justify-content: flex-start;
+        gap: 8px 16px;
+    }
+
+    .portada {
+        gap: 30px;
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .ministerios-lista,
+    .predicaciones-contenido,
+    .actividades-lista,
+    .contacto-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .orientacion-contenido {
+        gap: 30px;
+    }
+
+    .portada-visual img {
+        height: 380px;
+    }
+}
+
+/* ========================================
+   16. CELULARES
+======================================== */
+
+@media (max-width: 650px) {
+    html {
+        scroll-padding-top: 140px;
+    }
+
+    section {
+        scroll-margin-top: 140px;
+    }
+
+    .cabecera {
+        gap: 10px;
+        padding: 14px 18px;
+    }
+
+    .marca {
+        font-size: 1.2rem;
+    }
+
+    .navegacion {
+        gap: 5px 13px;
+    }
+
+    .navegacion a {
+        font-size: 0.82rem;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 48px 20px;
+    }
+
+    .portada-contenido h1 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .portada-contenido p {
+        font-size: 1rem;
+    }
+
+    .portada-visual {
+        min-height: auto;
+    }
+
+    .portada-visual img {
+        height: 300px;
+    }
+
+    .seccion-nosotros,
+    .seccion-ministerios,
+    .seccion-predicaciones,
+    .seccion-actividades,
+    .seccion-orientacion,
+    .seccion-contacto,
+    .seccion-instituto {
+        padding: 58px 20px;
+    }
+
+    .nosotros-detalles,
+    .ministerios-lista,
+    .predicaciones-contenido,
+    .actividades-lista,
+    .orientacion-contenido,
+    .contacto-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-detalles,
+    .ministerios-lista,
+    .predicaciones-contenido,
+    .actividades-lista,
+    .contacto-lista {
+        gap: 16px;
+    }
+
+    .tarjeta-ministerio,
+    .tarjeta-actividad,
+    .tarjeta-contacto,
+    .nosotros-detalles article {
+        padding: 23px;
+    }
+
+    .admin-actividades,
+    .orientacion-panel {
+        padding: 22px;
+    }
+
+    .predicaciones-pestanas {
+        gap: 8px;
+    }
+
+    .pestana {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .pie-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .chatbot {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .chatbot-boton {
+        width: 56px;
+        height: 56px;
+    }
+
+    .chatbot-ventana {
+        right: -4px;
+        bottom: 68px;
+        width: min(340px, calc(100vw - 24px));
+    }
+}
+
+/* ========================================
+   17. RESPETO POR MOVIMIENTO REDUCIDO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
