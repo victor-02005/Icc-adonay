@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICC Adonay | Iglesia Cruzada Cristiana</title>
+<meta name="description" content="Conoce ICC Adonay, nuestros ministerios, actividades, predicaciones y servicios.">
+<meta name="theme-color" content="#152B40">
+<meta property="og:title" content="ICC Adonay | Iglesia Cruzada Cristiana">
+<meta property="og:description" content="Ministerios, eventos, predicaciones y atención de ICC Adonay.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⛪%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header>
+<div class="bar">
+<a class="brand" href="#inicio">ICC <span>Adonay</span></a>
+<button id="mb" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">☰ Menú</button>
+<nav id="nav" aria-label="Principal"><ul>
+<li><a href="#nosotros">Nosotros</a></li><li><a href="#ministerios">Ministerios</a></li><li><a href="#iglesias">Iglesias hijas</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#predicaciones">Predicaciones</a></li><li><a href="#instituto">Instituto</a></li><li><a href="#orientacion">Orientación</a></li><li><a href="#donaciones">Donaciones</a></li><li><a href="#contacto">Contacto</a></li>
+</ul></nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="inicio">
+<small>Iglesia Cruzada Cristiana</small>
+<h1>ICC Adonay</h1>
+<p>Una comunidad para comunicar el mensaje cristiano, acompañar a las personas y servir a la familia y a la comunidad.</p>
+<a class="btn p" href="#eventos">Próximos eventos</a><a class="btn s" href="#predicaciones">Predicaciones</a><a class="btn s" href="#contacto">Contáctanos</a>
+</div>
+
+<section id="nosotros" class="sec"><div class="w"><h2>Nosotros</h2><div class="grid" id="ng"></div></div></section>
+
+<section id="ministerios" class="sec"><div class="w"><h2>Ministerios</h2><p class="lead">Los once ministerios que sirven en ICC Adonay.</p><div class="grid" id="mg"></div></div></section>
+
+<section id="iglesias" class="sec"><div class="w"><h2>Iglesias hijas</h2><p class="lead">Congregaciones vinculadas a ICC Adonay.</p><div class="grid" id="ig"></div></div></section>
+
+<section id="eventos" class="sec"><div class="w"><h2>Eventos y anuncios</h2>
+<div class="grid" id="evu"></div>
+<p><button class="btn d" id="evb" aria-expanded="false">Ver actividades anteriores</button></p>
+<div class="grid" id="evp" hidden></div>
+</div></section>
+
+<section id="predicaciones" class="sec"><div class="w">
+<h2>Predicaciones y enseñanzas</h2>
+<p class="lead">Videos y bosquejos en un solo lugar.</p>
+<label for="q" class="lead">Buscar</label><input id="q" class="search" type="search" placeholder="Título, predicador, pasaje…" maxlength="60">
+<div class="tabs" role="tablist" aria-label="Predicaciones">
+<button role="tab" id="t1" aria-selected="true" aria-controls="p1">Videos</button>
+<button role="tab" id="t2" aria-selected="false" aria-controls="p2" tabindex="-1">Bosquejos</button>
+</div>
+<div class="panel" id="p1" role="tabpanel" aria-labelledby="t1"><div class="grid" id="vg"></div></div>
+<div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden><div class="grid" id="bg"></div></div>
+</div></section>
+
+<section id="instituto" class="sec"><div class="w"><h2>Instituto</h2><div class="grid" id="inst"></div></div></section>
+
+<section id="orientacion" class="sec"><div class="w">
+<h2>Atención y orientación</h2>
+<p class="lead">Solicita contacto o acompañamiento. Tu solicitud es privada y no se publica.</p>
+<div class="two">
+<form id="f" novalidate>
+<label for="n">Nombre o forma de identificación (opcional)</label><input id="n" maxlength="80" autocomplete="name">
+<label for="c">Correo o teléfono de contacto</label><input id="c" maxlength="120" required autocomplete="email">
+<label for="m">Motivo general</label>
+<select id="m" required><option value="">Selecciona…</option><option>Orientación pastoral</option><option>Solicitud de contacto</option><option>Acompañamiento</option><option>Otro</option></select>
+<div class="hp" aria-hidden="true"><label for="web">No llenar</label><input id="web" tabindex="-1" autocomplete="off"></div>
+<label class="chk"><input type="checkbox" id="a" required> Autorizo el tratamiento de mis datos según la <a href="privacidad.html">política de privacidad</a>.</label>
+<button class="btn d" type="submit">Enviar solicitud</button>
+<div id="msg" role="status" aria-live="polite"></div>
+</form>
+<div>
+<div class="note">No necesitas escribir detalles íntimos de tu situación para pedir una llamada.</div>
+<div class="note">No es un servicio de emergencias. Si estás en peligro, llama al 123.</div>
+</div></div></div></section>
+
+<section id="donaciones" class="sec"><div class="w"><h2>Donaciones</h2>
+<p class="lead">Información sobre los canales oficiales de donación.</p>
+<div id="don"></div>
+<div class="note">No almacenamos datos de tarjetas ni publicamos donantes o transacciones.</div>
+</div></section>
+
+<section id="contacto" class="sec"><div class="w"><h2>Contacto</h2><div class="grid" id="cg"></div><div id="mapa"></div></div></section>
+</main>
+
+<footer><div class="w">
+<div><p><strong>ICC Adonay</strong></p><p>Iglesia Cruzada Cristiana Adonay</p></div>
+<div><p><a href="privacidad.html">Política de privacidad</a></p><p><a href="#contacto">Contacto</a></p></div>
+<p>© <span id="yr">2026</span> ICC Adonay</p>
+</div></footer>
+
+<dialog id="dlg" aria-label="Detalle del ministerio"><div id="dc"></div><form method="dialog"><button class="btn d">Cerrar</button></form></dialog>
+
+<button id="chatb" aria-expanded="false" aria-controls="chat">💬 Ayuda</button>
+<div id="chat" role="dialog" aria-label="Asistente de orientación">
+<header>Asistente ICC Adonay</header>
+<div id="cl" aria-live="polite"><p>Hola, puedo orientarte sobre la página. No reemplazo a un pastor ni a servicios de emergencia.</p></div>
+<div class="q"><button data-k="Horarios">Horarios</button><button data-k="Ministerios">Ministerios</button><button data-k="Eventos">Eventos</button><button data-k="Instituto">Instituto</button><button data-k="Hablar con una persona">Hablar con una persona</button></div>
+<form id="cf"><input id="ci" aria-label="Escribe tu pregunta" maxlength="120" placeholder="Escribe tu pregunta"><button>Enviar</button></form>
+</div>
+<script src="js/data.js"></script>
+<script src="js/config.js"></script><script src="js/loader.js"></script>
+</body>
+</html>
