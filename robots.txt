@@ -1,3 +1,5 @@
+
 User-agent: *
 Allow: /
-Sitemap: https://TU-DOMINIO.com/sitemap.xml
+
+Sitemap: https://victor-02005.github.io/Icc-adonay/sitemap.xml

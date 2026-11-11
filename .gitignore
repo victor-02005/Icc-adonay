@@ -1,3 +1,28 @@
+# Variables de entorno y secretos
 .env
+.env.*
+!.env.example
+backend/.env
+
+# Bases de datos locales
 *.db
+*.sqlite
+*.sqlite3
+
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+backend/.venv/
+
+# Configuración local del editor
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
