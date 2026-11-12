@@ -102,8 +102,17 @@ def init():
 
 
 app = FastAPI(title="ICC Adonay API", docs_url=None, redoc_url=None, openapi_url=None)
-app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=["GET", "POST"], allow_headers=["Content-Type"], allow_credentials=False)
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=ORIGINS,
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=[
+        "Authorization",
+        "Content-Type",
+        "X-Requested-With",
+    ],
+)
 
 @app.on_event("startup")
 def _start():
